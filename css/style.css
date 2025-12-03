@@ -37,6 +37,8 @@ body{
     font-family: 'Roboto', 'sans-serif';
     background-color: var(--bg-color);
     color: var(--text-color);
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 a{
@@ -79,10 +81,31 @@ nav .right a span{
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
+    margin: 50px 0;
+    margin-bottom: 100px;
+    gap: 40px;
 }
 
 .hero-section .text{
     flex: 5;
+}
+
+.hero-section .text h2{
+    font-size: 45px;
+}
+
+.hero-section .text .links{
+    margin-top: 25px;
+}
+
+.hero-section .text .links a{
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid var(--link-color);
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: .1s;
 }
 
 .hero-section .headshot{
@@ -138,4 +161,55 @@ nav .right a span{
 
 .skills-section .cells .cell span{
     font-size: 18px;
+}
+
+.contact-section{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.contact-section h2{
+    font-size: 35px;
+}
+
+.contact-section .group{
+    display: flex;
+    gap: 50px;
+}
+
+.contact-section .group .text{
+    flex: 3;
+    margin-top: 20px;
+}
+
+.contact-section .group form{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section .group form input,
+.contact-section .group form textarea{
+    font-family: 'Roboto', sans-serif;
+    border: 2px solid var(--link-color);
+    background-color: transparent;
+    padding: 10px;
+    margin-bottom: 15px;
+    outline: none;
+    resize: none;
+}
+
+.contact-section .group form button{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background-color: var(--link-color);
+    border: none;
+    height: 50px;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.contact-section .group form button:hover{
+    filter: brightness(.9);
 }
