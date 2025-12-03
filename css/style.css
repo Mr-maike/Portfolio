@@ -67,7 +67,7 @@ nav .right a{
 
 nav .right a:last-child {
     color: var(--background-color-default);
-    background-color: var(--text-color);
+    background-color: #44475A;
     padding: 5px 15px;
     border-radius: 5px;
 }
