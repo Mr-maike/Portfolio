@@ -72,4 +72,3 @@ preferDarkScheme.addEventListener('change', e => {
         updateMode();
     }
 });
-
