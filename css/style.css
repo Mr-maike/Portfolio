@@ -133,6 +133,11 @@ nav .right a span{
     transition: .1s;
 }
 
+.hero-section .text .links a:hover{
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+}
+
 .hero-section .headshot{
     flex: 2;
     display: flex;
@@ -141,6 +146,7 @@ nav .right a span{
 
 .hero-section .headshot img{
     width: 350px;
+    height: 340px;
     border-radius: 50%;
 }
 

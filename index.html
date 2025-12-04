@@ -49,10 +49,6 @@
                         <i class="fa-solid fa-code"></i>
                         <span>Skills</span>
                     </a>
-                    <a href="#testimony">
-                        <i class="fa-solid fa-pen"></i>
-                        <span>Testimony</span>
-                    </a>
                     <a href="#contact">
                         <i class="fa-solid fa-envelope"></i>
                         <span>Contact</span>
@@ -61,7 +57,7 @@
             </div>
 
             <div class="headshot">
-                
+                <img src="/imgs/image-hero.jpg" alt="">
             </div>
         </section>
 
@@ -99,18 +95,18 @@
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque odio pariatur dolores, explicabo tempora et quasi numquam, doloribus ratione officiis sit magnam natus voluptate laboriosam iusto. Obcaecati blanditiis nesciunt veritatis!
         
             </div>
-            <form method="post">
+            <form method="POST" action="">
                 <label for="name">Name</label>
-                <input type="text" id="name">
+                <input type="text" id="name" name="name">
 
                 <label for="email">Email</label>
-                <input type="email" id="email">
+                <input type="email" id="email" name="email">
 
                 <label for="subject">Subject</label>
-                <input type="text" id="subject">
+                <input type="text" id="subject" name="subject">
 
                 <label for="message">Message</label>
-                <textarea id="message" cols="30" rows="10"></textarea>
+                <textarea id="message" cols="30" rows="10" name="message"></textarea>
 
                 <button type="submit">Send Message</button>
             </form>
@@ -128,7 +124,26 @@
      <script src="/js/switch-theme.js"></script>
      <script src="/js/navbar.js"></script>
      <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+     <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
      <script src="/js/typing-effect.js"></script>
+     <script>
+        document.getElementById("contactForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const data = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value
+  };
+
+  await fetch("https://formspree.io/f/xdkqdavy", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
+
+  alert("Mensagem enviada!");
+});
+        </script>
 </body>
 </html>
